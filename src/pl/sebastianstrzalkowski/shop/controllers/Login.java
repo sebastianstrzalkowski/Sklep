@@ -1,0 +1,113 @@
+package pl.sebastianstrzalkowski.shop.controllers;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import pl.sebastianstrzalkowski.shop.lists.BuyerList;
+import pl.sebastianstrzalkowski.shop.lists.SellerList;
+import pl.sebastianstrzalkowski.shop.models.Buyer;
+import pl.sebastianstrzalkowski.shop.models.Seller;
+
+import java.io.IOException;
+
+public class Login {
+    public TextField surnameField;
+    public TextField nameField;
+    public CheckBox buyerCheck;
+    public CheckBox sellerCheck;
+    public AnchorPane login;
+    public Text loginMsg;
+    public Button loginButton;
+    public String title = "Witaj";
+    private int test = 0;
+    private static double money;
+
+
+    private ObservableList<Seller> sellerList = FXCollections.observableArrayList(
+            SellerList.getSellerList()
+
+    );
+
+    private ObservableList<Buyer> buyerList = FXCollections.observableArrayList(
+            BuyerList.getBuyerList()
+    );
+
+
+
+    public void loginButton(ActionEvent actionEvent) throws IOException {
+
+        String name = nameField.getText();
+        String surname = surnameField.getText();
+        if (sellerCheck.isSelected()) {
+            for (Seller x : sellerList)
+                if (x.getName().equals(name) && x.getSurname().equals(surname)) {
+                    test = 0;
+
+                    Stage stageSell = new Stage();
+                    AnchorPane myPaneWindowSell = (AnchorPane) FXMLLoader.load(getClass().getResource
+                            ("fxml/SellUnicorn.fxml"));
+                    Scene mySceneSell = new Scene(myPaneWindowSell);
+                    stageSell.setTitle(title + " " + name);
+                    stageSell.setScene(mySceneSell);
+                    stageSell.show();
+
+                    break;
+                } else if (!x.getName().equals(name) || !x.getSurname().equals(surname)) {
+                    test++;
+                }
+            if (test == sellerList.size()) {
+                loginButton.setText("Złe dane logowania");
+            }
+        }
+        if (buyerCheck.isSelected()) {
+            for (Buyer x : buyerList)
+                if (x.getName().equals(name) && x.getSurname().equals(surname)) {
+                    test = 0;
+
+                    Stage stageBuy = new Stage();
+                    AnchorPane myPaneWindowBuy = (AnchorPane) FXMLLoader.load(getClass().getResource
+                            ("fxml/BuyUnicorn.fxml"));
+                    Scene myScene = new Scene(myPaneWindowBuy);
+                    stageBuy.setTitle(title + " " + login);
+                    stageBuy.setScene(myScene);
+                    stageBuy.show();
+
+                    money = x.getMoney();
+                    break;
+                }
+                else if (!x.getName().equals(name) || !x.getSurname().equals(surname)) {
+                    test++;
+                }
+
+            if (test == buyerList.size()) {
+                loginButton.setText("Złe dane logowania");
+            }
+
+        }
+
+    }
+
+    public static double getMoney(){
+        return money;
+    }
+    public static void moneyAfterBuy(double price){
+        money = money - price;
+    }
+    public void sellerCheck(ActionEvent actionEvent) {
+        buyerCheck.setSelected(false);
+    }
+    public void buyerCheck(ActionEvent actionEvent) {
+        sellerCheck.setSelected(false);
+    }
+
+}
+
+
