@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0cdee58a-47b8-4b1e-8afc-a8302a0ab021" name="Default" comment="" />
+    <list default="true" id="0cdee58a-47b8-4b1e-8afc-a8302a0ab021" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/com/intellij/uiDesigner/core/AbstractLayout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/com/intellij/uiDesigner/core/DimensionInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/com/intellij/uiDesigner/core/GridConstraints.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/com/intellij/uiDesigner/core/GridLayoutManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/com/intellij/uiDesigner/core/HorizontalInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/com/intellij/uiDesigner/core/LayoutState.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/com/intellij/uiDesigner/core/Spacer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/com/intellij/uiDesigner/core/SupportCode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/com/intellij/uiDesigner/core/Util.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/com/intellij/uiDesigner/core/VerticalInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/controllers/BuyUnicorn.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/controllers/Login.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/controllers/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/controllers/SellUnicorn.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/controllers/fxml/BuyUnicorn.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/controllers/fxml/Login.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/controllers/fxml/SellUnicorn.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/enums/Breed.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/enums/Status.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/lists/BuyerList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/lists/SellerList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/lists/UnicornList.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/lists/UnicornListPrimary.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/models/Buyer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/models/Human.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/models/Seller.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/models/Unicorn.class" afterPath="" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -629,7 +658,7 @@
       <workItem from="1512127168709" duration="599000" />
       <workItem from="1512238328691" duration="603000" />
       <workItem from="1512240067535" duration="5130000" />
-      <workItem from="1512246982520" duration="638000" />
+      <workItem from="1512246982520" duration="1237000" />
     </task>
     <servers />
   </component>
@@ -639,7 +668,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141045000" />
+    <option name="totallyTimeSpent" value="141644000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
