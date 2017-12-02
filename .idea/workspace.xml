@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0cdee58a-47b8-4b1e-8afc-a8302a0ab021" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pl/sebastianstrzalkowski/shop/controllers/Register.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pl/sebastianstrzalkowski/shop/controllers/fxml/Register.fxml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/controllers/GUI.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pl/sebastianstrzalkowski/shop/controllers/GUI.java" afterPath="$PROJECT_DIR$/src/pl/sebastianstrzalkowski/shop/ShopApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/controllers/Login.class" afterPath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/controllers/Login.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/lists/BuyerList.class" afterPath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/lists/BuyerList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/controllers/fxml/Login.fxml" afterPath="$PROJECT_DIR$/out/production/jednorozce/pl/sebastianstrzalkowski/shop/controllers/fxml/Login.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/sebastianstrzalkowski/shop/controllers/Login.java" afterPath="$PROJECT_DIR$/src/pl/sebastianstrzalkowski/shop/controllers/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/sebastianstrzalkowski/shop/controllers/fxml/Login.fxml" afterPath="$PROJECT_DIR$/src/pl/sebastianstrzalkowski/shop/controllers/fxml/Login.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pl/sebastianstrzalkowski/shop/lists/BuyerList.java" afterPath="$PROJECT_DIR$/src/pl/sebastianstrzalkowski/shop/lists/BuyerList.java" />
-    </list>
+    <list default="true" id="0cdee58a-47b8-4b1e-8afc-a8302a0ab021" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -641,7 +629,7 @@
       <workItem from="1512127168709" duration="599000" />
       <workItem from="1512238328691" duration="603000" />
       <workItem from="1512240067535" duration="5130000" />
-      <workItem from="1512246982520" duration="65000" />
+      <workItem from="1512246982520" duration="638000" />
     </task>
     <servers />
   </component>
@@ -651,7 +639,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140472000" />
+    <option name="totallyTimeSpent" value="141045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
