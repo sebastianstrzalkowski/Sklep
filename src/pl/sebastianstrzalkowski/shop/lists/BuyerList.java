@@ -1,12 +1,9 @@
 package pl.sebastianstrzalkowski.shop.lists;
 
 
-
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import pl.sebastianstrzalkowski.shop.models.Buyer;
-
 
 
 public class BuyerList {
@@ -27,11 +24,12 @@ public class BuyerList {
             System.out.print(x.getName());
         }
     }
+
     public static void addToBuyerList(Buyer kupujacy) {
         buyerList.add(kupujacy);
     }
 
-    public static ObservableList<Buyer> getBuyerList(){
+    public static ObservableList<Buyer> getBuyerList() {
         return buyerList;
     }
 }

@@ -2,10 +2,10 @@ package pl.sebastianstrzalkowski.shop.models;
 
 public class Human {
 
-    private  String name;
-    private  String surname;
+    private String name;
+    private String surname;
 
-    Human(String imie, String nazwisko){
+    Human(String imie, String nazwisko) {
 
         this.name = imie;
         this.surname = nazwisko;
@@ -13,8 +13,7 @@ public class Human {
     }
 
 
-
-    public  String getName() {
+    public String getName() {
         return name;
     }
 
@@ -22,11 +21,12 @@ public class Human {
         this.name = name;
     }
 
-    public  String getSurname() {
+    public String getSurname() {
         return surname;
     }
 
     public void setSurname(String nazwisko) {
         this.surname = nazwisko;
     }
+
 }

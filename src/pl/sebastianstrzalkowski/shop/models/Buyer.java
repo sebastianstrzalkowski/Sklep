@@ -5,11 +5,10 @@ public class Buyer extends Human {
 
     private double money;
 
-    public Buyer(String name, String surname, double money){
+    public Buyer(String name, String surname, double money) {
         super(name, surname);
         this.money = money;
     }
-
 
 
     public double getMoney() {

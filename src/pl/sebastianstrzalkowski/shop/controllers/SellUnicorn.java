@@ -8,7 +8,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
 import pl.sebastianstrzalkowski.shop.enums.Breed;
-import pl.sebastianstrzalkowski.shop.enums.Status;
+import pl.sebastianstrzalkowski.shop.enums.Availability;
 import pl.sebastianstrzalkowski.shop.lists.UnicornList;
 import pl.sebastianstrzalkowski.shop.models.Unicorn;
 
@@ -53,12 +53,12 @@ public class SellUnicorn implements Initializable {
         parent1Column.setCellValueFactory(
                 new PropertyValueFactory("Parent1"));
         parent2Column.setCellValueFactory(
-                new PropertyValueFactory<Unicorn,String>("Parent2"));
+                new PropertyValueFactory<Unicorn, String>("Parent2"));
 
         unicornTable.setItems(unicornList);
 
         breedBox.getItems().addAll(Breed.values());
-        statusBox.getItems().addAll(Status.values());
+        statusBox.getItems().addAll(Availability.values());
 
         parent1Box.getItems().addAll(
                 unicornList
@@ -75,20 +75,19 @@ public class SellUnicorn implements Initializable {
             double price = Double.parseDouble(priceTextField.getText());
 
             Breed breed = (Breed) breedBox.getValue();
-            Status status = (Status) statusBox.getValue();
+            Availability availability = (Availability) statusBox.getValue();
             Unicorn parent1 = (Unicorn) parent1Box.getValue();
             Unicorn parent2 = (Unicorn) parent2Box.getValue();
 
             if (Unicorn.testBreed(parent1, parent2, breed)) {
-                unicornList.add(new Unicorn(name, breed, price, status, parent1, parent2));
+                unicornList.add(new Unicorn(name, breed, price, availability, parent1, parent2));
                 checkBreed.setText("Udało się dodać jednorożca");
                 parent2Box.setItems(unicornList);
                 parent1Box.setItems(unicornList);
             } else {
                 checkBreed.setText("Nie udao się dodać. Sprawdź rasy i rodziców");
             }
-        }
-        catch (NumberFormatException nfe) {
+        } catch (NumberFormatException nfe) {
             priceTextField.setText("Tylko liczby!!");
         }
 

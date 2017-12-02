@@ -8,14 +8,13 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import pl.sebastianstrzalkowski.shop.enums.Status;
+import pl.sebastianstrzalkowski.shop.enums.Availability;
 import pl.sebastianstrzalkowski.shop.lists.UnicornList;
 import pl.sebastianstrzalkowski.shop.models.Unicorn;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 
 
 public class BuyUnicorn implements Initializable {
@@ -34,26 +33,24 @@ public class BuyUnicorn implements Initializable {
     );
 
 
-    public void buyButton(ActionEvent actionEvent)throws IOException {
+    public void buyButton(ActionEvent actionEvent) throws IOException {
 
-        if(!unicornTable.getSelectionModel().isEmpty()) {
+        if (!unicornTable.getSelectionModel().isEmpty()) {
             Unicorn unicorn = (Unicorn) unicornTable.getSelectionModel().getSelectedItem();
 
-            if (unicorn.getStatus().equals(Status.NIEDOSTPENY)) {
+            if (unicorn.getAvailability().equals(Availability.NIEDOSTPENY)) {
                 textField.setText("Jednorożec " + unicorn.getName() + " nie jest już na sprzedaż, wybierz innego.");
             } else {
-                if(Login.getMoney() >= unicorn.getPrice()) {
+                if (Login.getMoney() >= unicorn.getPrice()) {
                     Login.moneyAfterBuy(unicorn.getPrice());
-                    unicorn.setStatus(unicorn);
+                    unicorn.setAvailability(unicorn);
                     unicornTable.refresh();
                     textField.setText("Jednorożec " + unicorn.getName() + " jest Twój. Zostało Ci " + Login.getMoney());
-                }
-                else{
-                    textField.setText("Jednorożec jest za drogi! Brakuje Ci: " + (unicorn.getPrice()-Login.getMoney()));
+                } else {
+                    textField.setText("Jednorożec jest za drogi! Brakuje Ci: " + (unicorn.getPrice() - Login.getMoney()));
                 }
             }
-        }
-        else {
+        } else {
             textField.setText("Wybierz zanim klikniesz przycisk :)");
         }
     }
