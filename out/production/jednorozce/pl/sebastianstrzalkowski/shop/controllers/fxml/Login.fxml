@@ -8,12 +8,14 @@
 
 <AnchorPane fx:id="login" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.sebastianstrzalkowski.shop.controllers.Login">
    <children>
-      <Button fx:id="loginButton" layoutX="185.0" layoutY="293.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="51.0" prefWidth="224.0" text="Zaloguj" />
-      <CheckBox fx:id="sellerCheck" layoutX="171.0" layoutY="253.0" mnemonicParsing="false" text="Sprzedawca" onAction="#sellerCheck" />
-      <CheckBox fx:id="buyerCheck" layoutX="348.0" layoutY="253.0" mnemonicParsing="false" text="Kupujacy" onAction="#buyerCheck" />
+      <Button fx:id="loginButton" layoutX="188.0" layoutY="231.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="51.0" prefWidth="224.0" text="Zaloguj" />
+      <CheckBox fx:id="sellerCheck" layoutX="170.0" layoutY="200.0" mnemonicParsing="false" onAction="#sellerCheck" text="Sprzedawca" />
+      <CheckBox fx:id="buyerCheck" layoutX="359.0" layoutY="200.0" mnemonicParsing="false" onAction="#buyerCheck" text="Kupujacy" />
       <TextField fx:id="nameField" layoutX="189.0" layoutY="78.0" prefHeight="25.0" prefWidth="277.0" />
       <TextField fx:id="surnameField" layoutX="189.0" layoutY="120.0" prefHeight="25.0" prefWidth="277.0" />
       <Text layoutX="90.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imie:" wrappingWidth="68.99999678134918" />
       <Text layoutX="90.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko:" wrappingWidth="68.99999678134918" />
+      <Text layoutX="66.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jeśli nie masz konta, zarejestruj się!" />
+      <Button fx:id="registerButton" layoutX="302.0" layoutY="327.0" mnemonicParsing="false" onAction="#registerButton" text="Rejestracja" />
    </children>
 </AnchorPane>

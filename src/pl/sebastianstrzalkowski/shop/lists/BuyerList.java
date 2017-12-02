@@ -27,7 +27,7 @@ public class BuyerList {
             System.out.print(x.getName());
         }
     }
-    public void addToBuyerList(Buyer kupujacy) {
+    public static void addToBuyerList(Buyer kupujacy) {
         buyerList.add(kupujacy);
     }
 

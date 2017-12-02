@@ -1,4 +1,4 @@
-package pl.sebastianstrzalkowski.shop.controllers;
+package pl.sebastianstrzalkowski.shop;
 
 
 import javafx.application.Application;
@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 
-public class GUI extends Application {
+public class ShopApplication extends Application {
 
     @FXML
     public AnchorPane myPane;
@@ -23,7 +23,7 @@ public class GUI extends Application {
     public void start(Stage stage) throws IOException {
 
         myPane = (AnchorPane) FXMLLoader.load(getClass().getResource
-                ("fxml/Login.fxml"));
+                ("controllers/fxml/Login.fxml"));
         Scene myScene = new Scene(myPane, 600,370);
 
         stage.setTitle("Panel logowania");
