@@ -37,8 +37,6 @@ public class Login {
 
 
     public void loginButton(ActionEvent actionEvent) throws IOException {
-//Zastosować etykiety
-
         String name = nameField.getText();
         String surname = surnameField.getText();
         if (sellerCheck.isSelected()) {

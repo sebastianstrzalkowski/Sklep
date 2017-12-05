@@ -65,7 +65,7 @@ public class BuyUnicorn implements Initializable {
         priceColum.setCellValueFactory(
                 new PropertyValueFactory("Price"));
         statusColumn.setCellValueFactory(
-                new PropertyValueFactory("Status"));
+                new PropertyValueFactory("Availability"));
         parentColumn1.setCellValueFactory(
                 new PropertyValueFactory("Parent1"));
         parentColumn2.setCellValueFactory(

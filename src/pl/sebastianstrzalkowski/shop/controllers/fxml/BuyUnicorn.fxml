@@ -6,19 +6,24 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="myPane" prefHeight="535.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.sebastianstrzalkowski.shop.controllers.BuyUnicorn" >
-   <children>
-      <TableView fx:id="unicornTable" layoutX="21.0" layoutY="7.0"  prefHeight="303.0" prefWidth="570.0" AnchorPane.bottomAnchor="225.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="7.0">
-        <columns>
-            <TableColumn id="nameColumn" fx:id="nameColumn" editable="false" prefWidth="131.0" text="Imie" />
-            <TableColumn fx:id="breedColumn" prefWidth="90.0" text="Rasa" />
-            <TableColumn fx:id="priceColum" prefWidth="83.0" text="Cena" />
-            <TableColumn fx:id="statusColumn" prefWidth="94.0" text="Status" />
-            <TableColumn fx:id="parentColumn1" prefWidth="85.0" text="Rodzic1" />
-            <TableColumn fx:id="parentColumn2" prefWidth="86.0" text="Rodzic2" />
-        </columns>
-      </TableView>
-      <Button layoutX="29.0" layoutY="441.0" mnemonicParsing="false" onAction="#buyButton" prefHeight="32.0" prefWidth="554.0" text="Kup" />
-      <TextField fx:id="textField" editable="false" layoutX="59.0" layoutY="382.0" prefHeight="26.0" prefWidth="496.0" promptText="Wybierz i kup jednorożca" />
-   </children>
+<AnchorPane fx:id="myPane" prefHeight="535.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.sebastianstrzalkowski.shop.controllers.BuyUnicorn">
+    <children>
+        <TableView fx:id="unicornTable" layoutX="21.0" layoutY="7.0" prefHeight="303.0" prefWidth="570.0"
+                   AnchorPane.bottomAnchor="225.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="9.0"
+                   AnchorPane.topAnchor="7.0">
+            <columns>
+                <TableColumn id="nameColumn" fx:id="nameColumn" editable="false" prefWidth="131.0" text="Imie"/>
+                <TableColumn fx:id="breedColumn" prefWidth="90.0" text="Rasa"/>
+                <TableColumn fx:id="priceColum" prefWidth="83.0" text="Cena"/>
+                <TableColumn fx:id="statusColumn" prefWidth="94.0" text="Status"/>
+                <TableColumn fx:id="parentColumn1" prefWidth="85.0" text="Rodzic1"/>
+                <TableColumn fx:id="parentColumn2" prefWidth="86.0" text="Rodzic2"/>
+            </columns>
+        </TableView>
+        <Button layoutX="29.0" layoutY="441.0" mnemonicParsing="false" onAction="#buyButton" prefHeight="32.0"
+                prefWidth="554.0" text="Kup"/>
+        <TextField fx:id="textField" editable="false" layoutX="59.0" layoutY="382.0" prefHeight="26.0" prefWidth="496.0"
+                   promptText="Wybierz i kup jednorożca"/>
+    </children>
 </AnchorPane>

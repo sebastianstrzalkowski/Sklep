@@ -21,18 +21,16 @@ public class SellUnicorn implements Initializable {
     public TableColumn nameColumn;
     public TableColumn breedColumn;
     public TableColumn priceColumn;
-    public TableColumn statusColumn;
+    public TableColumn availabilityColumn;
     public TableColumn parent1Column;
     public TableColumn parent2Column;
     public TextField nameTextField;
-    public TextField breedTextField;
     public TextField priceTextField;
-    public TextField statusTextField;
     public ComboBox parent1Box;
     public ComboBox parent2Box;
     public Button addButton;
     public ComboBox breedBox;
-    public ComboBox statusBox;
+    public ComboBox availabilityBox;
     public Text checkBreed;
 
 
@@ -48,8 +46,8 @@ public class SellUnicorn implements Initializable {
                 new PropertyValueFactory("Breed"));
         priceColumn.setCellValueFactory(
                 new PropertyValueFactory("Price"));
-        statusColumn.setCellValueFactory(
-                new PropertyValueFactory("Status"));
+        availabilityColumn.setCellValueFactory(
+                new PropertyValueFactory("Availability"));
         parent1Column.setCellValueFactory(
                 new PropertyValueFactory("Parent1"));
         parent2Column.setCellValueFactory(
@@ -58,7 +56,7 @@ public class SellUnicorn implements Initializable {
         unicornTable.setItems(unicornList);
 
         breedBox.getItems().addAll(Breed.values());
-        statusBox.getItems().addAll(Availability.values());
+        availabilityBox.getItems().addAll(Availability.values());
 
         parent1Box.getItems().addAll(
                 unicornList
@@ -75,17 +73,27 @@ public class SellUnicorn implements Initializable {
             double price = Double.parseDouble(priceTextField.getText());
 
             Breed breed = (Breed) breedBox.getValue();
-            Availability availability = (Availability) statusBox.getValue();
+            Availability availability = (Availability) availabilityBox.getValue();
             Unicorn parent1 = (Unicorn) parent1Box.getValue();
             Unicorn parent2 = (Unicorn) parent2Box.getValue();
-
-            if (Unicorn.testBreed(parent1, parent2, breed)) {
-                unicornList.add(new Unicorn(name, breed, price, availability, parent1, parent2));
-                checkBreed.setText("Udało się dodać jednorożca");
-                parent2Box.setItems(unicornList);
-                parent1Box.setItems(unicornList);
+            if (breedBox.getSelectionModel().isEmpty() || availabilityBox.getSelectionModel().isEmpty()) {
+                checkBreed.setText("Uzupełnij dane");
             } else {
-                checkBreed.setText("Nie udao się dodać. Sprawdź rasy i rodziców");
+                if (parent1Box.getSelectionModel().isEmpty() && parent2Box.getSelectionModel().isEmpty()) {
+                    unicornList.add(new Unicorn(name, breed, price, availability));
+                    checkBreed.setText("Udało się dodać jednorożca");
+                    parent2Box.setItems(unicornList);
+                    parent1Box.setItems(unicornList);
+                } else {
+                    if (Unicorn.testBreed(parent1, parent2, breed) && !breedBox.getSelectionModel().isEmpty() && !availabilityBox.getSelectionModel().isEmpty()) {
+                        unicornList.add(new Unicorn(name, breed, price, availability, parent1, parent2));
+                        checkBreed.setText("Udało się dodać jednorożca");
+                        parent2Box.setItems(unicornList);
+                        parent1Box.setItems(unicornList);
+                    } else {
+                        checkBreed.setText("Nie udao się dodać. Sprawdź rasy i rodziców");
+                    }
+                }
             }
         } catch (NumberFormatException nfe) {
             priceTextField.setText("Tylko liczby!!");
