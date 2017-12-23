@@ -18,12 +18,12 @@ import java.util.ResourceBundle;
 public class SellUnicorn implements Initializable {
 
     public TableView unicornTable;
-    public TableColumn nameColumn;
-    public TableColumn breedColumn;
-    public TableColumn priceColumn;
-    public TableColumn availabilityColumn;
-    public TableColumn parent1Column;
-    public TableColumn parent2Column;
+    public TableColumn<ObservableList, Unicorn> nameColumn;
+    public TableColumn<ObservableList, Unicorn> breedColumn;
+    public TableColumn<ObservableList, Unicorn> priceColumn;
+    public TableColumn<ObservableList, Unicorn> availabilityColumn;
+    public TableColumn<ObservableList, Unicorn> parent1Column;
+    public TableColumn<ObservableList, Unicorn> parent2Column;
     public TextField nameTextField;
     public TextField priceTextField;
     public ComboBox parent1Box;
@@ -51,7 +51,7 @@ public class SellUnicorn implements Initializable {
         parent1Column.setCellValueFactory(
                 new PropertyValueFactory("Parent1"));
         parent2Column.setCellValueFactory(
-                new PropertyValueFactory<Unicorn, String>("Parent2"));
+                new PropertyValueFactory("Parent2"));
 
         unicornTable.setItems(unicornList);
 

@@ -20,12 +20,12 @@ import java.util.ResourceBundle;
 public class BuyUnicorn implements Initializable {
 
     public TableView unicornTable;
-    public TableColumn nameColumn;
-    public TableColumn breedColumn;
-    public TableColumn priceColum;
-    public TableColumn statusColumn;
-    public TableColumn parentColumn1;
-    public TableColumn parentColumn2;
+    public TableColumn<ObservableList, Unicorn> nameColumn;
+    public TableColumn<ObservableList, Unicorn> breedColumn;
+    public TableColumn<ObservableList, Unicorn> priceColum;
+    public TableColumn<ObservableList, Unicorn> statusColumn;
+    public TableColumn<ObservableList, Unicorn> parentColumn1;
+    public TableColumn<ObservableList, Unicorn> parentColumn2;
     public TextField textField;
 
     private final ObservableList<Unicorn> unicornList = FXCollections.observableArrayList(

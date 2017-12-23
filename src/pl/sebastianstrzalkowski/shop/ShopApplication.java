@@ -22,7 +22,7 @@ public class ShopApplication extends Application {
 
         AnchorPane myPane = (AnchorPane) FXMLLoader.load(getClass().getResource
                 ("controllers/fxml/Login.fxml"));
-        Scene myScene = new Scene(myPane, 600, 370);
+        Scene myScene = new Scene(myPane);
 
         stage.setTitle("Panel logowania");
         stage.setScene(myScene);
